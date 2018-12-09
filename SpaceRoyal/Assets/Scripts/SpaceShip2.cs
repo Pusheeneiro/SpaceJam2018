@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class SpaceShip : MonoBehaviour
+public class SpaceShip2 : MonoBehaviour
 {
-  
+
     public GameObject spaceShip;
     public GameObject buttonShipUp;
     public GameObject buttonShipDown;
@@ -37,10 +37,10 @@ public class SpaceShip : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        cannon = GameObject.Find("SpaceShip1/Cannon");
+        cannon = GameObject.Find("SpaceShip2/Cannon");
         cannonBody = cannon.GetComponent<Rigidbody2D>();
         cannonPosition2D = new Vector2(0, 0);
-       
+
 
     }
 
@@ -74,58 +74,58 @@ public class SpaceShip : MonoBehaviour
         string[] buttons = { "ButtonShipDown", "ButtonShipUp", "ButtonBarrierLeft", "ButtonBarrierRight", "ButtonBarrierCenter", "ButtonCannonLeft", "ButtonCannonRight", "ButtonCannonShot", "ButtonAutodestruct" };
         //int[] layers = { 8, 9 };
 
-        if (other.gameObject.name == "ButtonShipDown" && other.gameObject.layer == 8)
+        if (other.gameObject.name == "ButtonShipDown" && other.gameObject.layer == 9)
         {
             shipShouldMove = true;
             speedShip = -0.2f;
         }
 
-        if (other.gameObject.name == "ButtonShipUp" && other.gameObject.layer == 8)
+        if (other.gameObject.name == "ButtonShipUp" && other.gameObject.layer == 9)
         {
             shipShouldMove = true;
             speedShip = 0.2f;
         }
 
-        if (other.gameObject.name == "ButtonBarrierLeft" && other.gameObject.layer == 8)
+        if (other.gameObject.name == "ButtonBarrierLeft" && other.gameObject.layer == 9)
         {
-           
+
         }
 
-        if (other.gameObject.name == "ButtonBarrierRight" && other.gameObject.layer == 8)
+        if (other.gameObject.name == "ButtonBarrierRight" && other.gameObject.layer == 9)
         {
-            
+
         }
 
-        if (other.gameObject.name == "ButtonBarrierCenter" && other.gameObject.layer == 8)
+        if (other.gameObject.name == "ButtonBarrierCenter" && other.gameObject.layer == 9)
         {
-           
+
         }
 
-        if (other.gameObject.name == "ButtonCannonLeft" && other.gameObject.layer == 8)
+        if (other.gameObject.name == "ButtonCannonLeft" && other.gameObject.layer == 9)
         {
 
-            cannonShouldMove= true;
+            cannonShouldMove = true;
             speed = -0.2f;
 
         }
 
-        if (other.gameObject.name == "ButtonCannonRight" && other.gameObject.layer == 8)
+        if (other.gameObject.name == "ButtonCannonRight" && other.gameObject.layer == 9)
         {
 
             cannonShouldMove = true;
             speed = 0.2f;
         }
 
-        if (other.gameObject.name == "ButtonCannonShot" && other.gameObject.layer == 8)
+        if (other.gameObject.name == "ButtonCannonShot" && other.gameObject.layer == 9)
         {
-       
+
         }
 
-        if (other.gameObject.name == "ButtonAutodestruct" && other.gameObject.layer == 8)
+        if (other.gameObject.name == "ButtonAutodestruct" && other.gameObject.layer == 9)
         {
-        
+
         }
-       
+
     }
 }
 
